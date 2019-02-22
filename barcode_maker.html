@@ -1,0 +1,50 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Etch-a-Sketch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    
+</head>
+<body>
+    <div class="container"></div>
+    
+    
+    <script>
+        const body = document.querySelector('body')
+        
+
+        const container= document.querySelector('.container');
+
+        container.setAttribute("style", "display:grid; grid-template-columns:repeat(5, 1fr); grid-template-rows: 100px 350px 100px; grid-template-areas: 'h h h h h' 'm g g g n' 'f f f f f';");
+
+        const grid = document.createElement("div");
+        grid.className= "grid";
+        container.appendChild(grid);
+        grid.setAttribute("style", "grid-area: g; border: 5px solid red; display: grid; grid-template-columns: repeat(16,1fr), grid-template-columns: repeat(16, 1fr);")
+        
+        let griid = document.querySelector(".grid");
+        
+        let createDiv = function (num) {
+            for (let i = 0; i<num+1; i++){
+                let div = document.createElement("div");
+                div.className = "a" ;
+                griid.appendChild(div);
+                
+        
+            }}
+            let colorDiv = function (){ 
+		let a = document.querySelectorAll('.a');
+		for ( let i =0; i<a.length; i++){
+		 		a[i].addEventListener('mouseover', () =>{
+		 		 	a[i].setAttribute('style', 'border: 2px solid black; background:black;')})
+	}}
+	     
+
+        createDiv(255);
+        colorDiv();
+    </script>
+</body>
+</html>
